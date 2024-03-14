@@ -43,12 +43,16 @@ def load_file() -> Score | Part | Opus:
     return parse(hum_path, format="humdrum")
 
 
+def preprocess(file: Score | Part | Opus):
+    return file
+
+
 # ------------------------------------------------------------------------
 
 
 def main():
     file = load_file()
-    print(file)
+    file = preprocess(file)
 
 
 # ------------------------------------------------------------------------
