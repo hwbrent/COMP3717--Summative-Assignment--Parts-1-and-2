@@ -1,6 +1,6 @@
 import os
 
-from music21 import converter
+from music21.converter import parse
 
 this_dir = os.path.dirname(__file__)
 Data_dir = os.path.join(
@@ -21,7 +21,7 @@ def main():
 
     # Need to specify the "humdrum" format, otherwise the parser won't know
     # how to parse the file
-    score = converter.parse(file_path, format="humdrum")
+    score = parse(file_path, format="humdrum")
     print(score)
 
 
